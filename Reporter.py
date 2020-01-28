@@ -7,7 +7,7 @@ def main():
     db_user = 'root'
     db_password = 'password'
     db_name = 'attempts'
-    db_host = '35.154.187.227'
+    db_host = '13.229.231.157'
     db_table = 'report'
 
 

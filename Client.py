@@ -5,7 +5,7 @@ import socket
 import sys
 import os
 
-server = "13.229.133.156"
+server = "13.229.231.157"
 port = 8888
 auth_log = '/var/log/auth.log'
 
