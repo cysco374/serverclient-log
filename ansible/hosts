@@ -1,4 +1,4 @@
 [client]
-35.154.190.70 ansible_ssh_user=ubuntu ansible_port=22
+13.229.133.156 ansible_ssh_user=ubuntu ansible_port=22
 [server]
-35.154.187.227 ansible_ssh_user=ubuntu ansible_port=22
+13.229.231.157 ansible_ssh_user=ubuntu ansible_port=22

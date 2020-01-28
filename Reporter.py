@@ -5,8 +5,8 @@ import Server
 
 def main():
     db_user = 'root'
-    db_password = 'strong_password'
-    db_name = 'ssh_access_reports'
+    db_password = 'password'
+    db_name = 'attempts'
     db_host = '35.154.187.227'
     db_table = 'report'
 

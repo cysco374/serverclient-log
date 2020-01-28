@@ -5,7 +5,7 @@ import socket
 import sys
 import os
 
-server = "35.154.187.227"
+server = "13.229.133.156"
 port = 8888
 auth_log = '/var/log/auth.log'
 
@@ -24,10 +24,10 @@ def report(host,port,attempt_count):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((host, port))
         s.send(attempt_count)
-        print "Data sent to server"
+        print ("Data sent to server")
 
-    except socket.error, msg:
-        print "Socket closed %s" % str(msg)
+    except socket.error as msg:
+        print ("Socket closed %s") % str(msg)
     s.close()
 
 def main():
@@ -41,9 +41,9 @@ if __name__ == '__main__':
     pid = str(os.getpid())
     pidfile = "/tmp/mydaemon.pid"
     if os.path.isfile(pidfile):
-        print "%s already exists, exiting" % pidfile
+        print ("%s already exists, exiting") % pidfile
         sys.exit(0)
-    file(pidfile, 'w').write(pid)
+    getattr(pidfile, 'read', pidfile, 'w').write(pid)
     try:
         main()
     finally:

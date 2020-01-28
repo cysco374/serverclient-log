@@ -1,7 +1,7 @@
-# SSH Access reporting
+# SSH Access Log Attempts
 
 
-SSH Access reporting tool is written on python. The deployment/configuration is automated with Ansible.
+SSH Access log attempts using python. The deployment/configuration is automated with Ansible.
 The reporting too has three parts
   - Server.py
   - Client.py
@@ -9,7 +9,7 @@ The reporting too has three parts
 
 ## Setup
 
-The set up is very simple. 
+The set up is 
 - The repo has an Ansible inventory file which is located in **ansible/hosts** add the client and server IP/hostname there.
 - Update Reporter.py and Cleint.py with server's IP/hostname
  The server store data in a mysql. The Reporter.py access the data directly from mysql therefore line number 10  need to be updated.
@@ -20,7 +20,6 @@ The client require ip/hostname of server to send data to. Therefore you need to 
 ```python
 server = "ip-address-of-server"
 ```
-Yes, It is possible to get these vlaue from ansible's host file. This is one the things I couldn't do due to time contrains.
 
 The client sends data directly to server's port ***8888***. This port should not be used by any other process. 
 
@@ -36,4 +35,3 @@ login to the client server and enter command
 ```bash
 Reporter.py
 ```
-I was not thinking straight and I put this one in AlphaClient machine instead of AlphaServer. This will work perefctly fine if you put it AlphaServer as well. Now its too late to do that.

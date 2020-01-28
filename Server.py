@@ -40,8 +40,8 @@ def db_execute(cnx,sql,select=False):
 
 def update_database(node_name,attempt_count):
     db_user = 'root'
-    db_password = 'strong_password'
-    db_name = 'ssh_access_reports'
+    db_password = 'password'
+    db_name = 'attempts'
     db_host = '127.0.0.1'
     db_table = 'report'
 
@@ -82,8 +82,8 @@ def main():
  
     try:
         s.bind((HOST, PORT))
-    except socket.error as err:
-        print ('Bind failed. Error Code : ') + str(err[0]) + ' Message ' + err[1]
+    except socket.error as err:err
+        print ('Bind failed. Error Code : ') + str(err[0]) + (' Message ') + err[1]
         sys.exit()
      
     print ('Socket bind complete')
@@ -104,7 +104,7 @@ def main():
             print
             print ("Keyboard Interrupt. Exiting.")
             break
-        except socket.error, msg:
+        except socket.error as msg:msg
             print ("Socket closed %s") % str(msg)
             break
     s.close()
