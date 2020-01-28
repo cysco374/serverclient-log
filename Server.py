@@ -82,7 +82,7 @@ def main():
  
     try:
         s.bind((HOST, PORT))
-    except socket.error as err
+    except socket.error as err:
         print 'Bind failed. Error Code : ' + str(err[0]) + ' Message ' + err[1]
         sys.exit()
      
