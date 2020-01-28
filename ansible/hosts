@@ -1,4 +1,4 @@
 [client]
 13.229.133.156 ansible_ssh_user=ubuntu ansible_port=22
 [server]
-13.229.231.157 ansible_ssh_user=ubuntu ansible_port=22
+s-ritx.cnv8n6qlgfh9.ap-southeast-1.rds.amazonaws.com ansible_ssh_user=ubuntu ansible_port=22

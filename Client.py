@@ -5,7 +5,7 @@ import socket
 import sys
 import os
 
-server = "13.229.231.157"
+server = "s-ritx.cnv8n6qlgfh9.ap-southeast-1.rds.amazonaws.com"
 port = 8888
 auth_log = '/var/log/auth.log'
 
