@@ -39,10 +39,10 @@ def db_execute(cnx,sql,select=False):
         sys.exit(1)
 
 def update_database(node_name,attempt_count):
-    db_user = 'root'
-    db_password = 'password'
+    db_user = 'ritx'
+    db_password = 'Msmb12345'
     db_name = 'attempts'
-    db_host = '127.0.0.1'
+    db_host = 's-ritx.cnv8n6qlgfh9.ap-southeast-1.rds.amazonaws.com'
     db_table = 'report'
 
     print ("Connecting to mysql.")
@@ -82,8 +82,8 @@ def main():
  
     try:
         s.bind((HOST, PORT))
-    except socket.error as err:err
-        print ('Bind failed. Error Code : ') + str(err[0]) + (' Message ') + err[1]
+    except socket.error as err:
+        print 'Bind failed. Error Code : ' + str(err[0]) + ' Message ' + err[1]
         sys.exit()
      
     print ('Socket bind complete')
@@ -104,7 +104,7 @@ def main():
             print
             print ("Keyboard Interrupt. Exiting.")
             break
-        except socket.error as msg:msg
+        except socket.error as msg:
             print ("Socket closed %s") % str(msg)
             break
     s.close()

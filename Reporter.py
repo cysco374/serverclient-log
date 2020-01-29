@@ -4,10 +4,10 @@ import sys
 import Server
 
 def main():
-    db_user = 'root'
-    db_password = 'password'
+    db_user = 'ritx'
+    db_password = 'Msmb12345'
     db_name = 'attempts'
-    db_host = '35.154.187.227'
+    db_host = 's-ritx.cnv8n6qlgfh9.ap-southeast-1.rds.amazonaws.com'
     db_table = 'report'
 
 

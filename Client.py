@@ -5,7 +5,7 @@ import socket
 import sys
 import os
 
-server = "13.229.133.156"
+server = "s-ritx.cnv8n6qlgfh9.ap-southeast-1.rds.amazonaws.com"
 port = 8888
 auth_log = '/var/log/auth.log'
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     if os.path.isfile(pidfile):
         print ("%s already exists, exiting") % pidfile
         sys.exit(0)
-    getattr(pidfile, 'read', pidfile, 'w').write(pid)
+    file(pidfile, 'w').write(pid)
     try:
         main()
     finally:
