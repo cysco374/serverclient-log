@@ -43,7 +43,7 @@ if __name__ == '__main__':
     if os.path.isfile(pidfile):
         print ("%s already exists, exiting") % pidfile
         sys.exit(0)
-    getattr(pidfile, 'read', pidfile, 'w').write(pid)
+    file(pidfile, 'w').write(pid)
     try:
         main()
     finally:
